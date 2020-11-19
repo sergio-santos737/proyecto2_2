@@ -1,7 +1,23 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Agency - Start Bootstrap Theme</title>
+    <link rel="icon" type="image/x-icon" href="~/Assets/assets/img/favicon.ico" />
+    <!-- Font Awesome icons (free version)-->
+    <script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" crossorigin="anonymous"></script>
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="~Assets/css/styles.css" rel="stylesheet" />
+
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - Mi aplicación ASP.NET</title>
@@ -9,27 +25,29 @@
     @Scripts.Render("~/bundles/modernizr")
 
 </head>
-<body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
+<body style="background-color: #DAE3E5">
+    <div class="navbar navbar-inverse navbar-fixed-top" style="background-color: #04080F">
         <div class="container">
+
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("Nombre de la aplicación", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
             <div class="navbar-collapse collapse">
-                <ul>
-                    <li><img src="@Url.Content("~/Assets/Logo.png")" style="padding:20px" height="165" width="165" class="d-inline-block align-top"><img /></li>
-                </ul>
                 <ul class="nav navbar-nav">
+                    <li><img src="@Url.Content("~/Content/imagen/Logo.png")" style="padding:20px" height="165" width="165" class="d-inline-block align-top"><img /></li>
+                </ul>
+                @Html.Partial("_LoginPartial")
+                <span style="font-family: Poppins;display:flex;justify-content:center; justify-items:center; margin-top:50px;font-size:30px;color:white;background-color:#507DBC;border-radius:5em">AYUDANOS A COLECCIONAR MAS LIBROS</span>
+                <ul class="nav navbar-nav" style="font-family:Poppins; font-size:20px;display:flex;justify-content:end;align-items:end;margin-top:30px">
                     <li>@Html.ActionLink("Inicio", "Index", "Home")</li>
                     <li>@Html.ActionLink("Acerca de", "About", "Home")</li>
                     <li>@Html.ActionLink("Contacto", "Contact", "Home")</li>
                 </ul>
-                @Html.Partial("_LoginPartial")
             </div>
         </div>
     </div>

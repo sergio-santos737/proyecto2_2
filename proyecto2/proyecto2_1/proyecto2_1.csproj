@@ -180,6 +180,39 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\assets\img\about\1.jpg" />
+    <Content Include="Assets\assets\img\about\2.jpg" />
+    <Content Include="Assets\assets\img\about\3.jpg" />
+    <Content Include="Assets\assets\img\about\4.jpg" />
+    <Content Include="Assets\assets\img\close-icon.svg" />
+    <Content Include="Assets\assets\img\favicon.ico" />
+    <Content Include="Assets\assets\img\header-bg.jpg" />
+    <Content Include="Assets\assets\img\logos\creative-market.jpg" />
+    <Content Include="Assets\assets\img\logos\designmodo.jpg" />
+    <Content Include="Assets\assets\img\logos\envato.jpg" />
+    <Content Include="Assets\assets\img\logos\themeforest.jpg" />
+    <Content Include="Assets\assets\img\map-image.png" />
+    <Content Include="Assets\assets\img\navbar-logo.svg" />
+    <Content Include="Assets\assets\img\portfolio\01-full.jpg" />
+    <Content Include="Assets\assets\img\portfolio\01-thumbnail.jpg" />
+    <Content Include="Assets\assets\img\portfolio\02-full.jpg" />
+    <Content Include="Assets\assets\img\portfolio\02-thumbnail.jpg" />
+    <Content Include="Assets\assets\img\portfolio\03-full.jpg" />
+    <Content Include="Assets\assets\img\portfolio\03-thumbnail.jpg" />
+    <Content Include="Assets\assets\img\portfolio\04-full.jpg" />
+    <Content Include="Assets\assets\img\portfolio\04-thumbnail.jpg" />
+    <Content Include="Assets\assets\img\portfolio\05-full.jpg" />
+    <Content Include="Assets\assets\img\portfolio\05-thumbnail.jpg" />
+    <Content Include="Assets\assets\img\portfolio\06-full.jpg" />
+    <Content Include="Assets\assets\img\portfolio\06-thumbnail.jpg" />
+    <Content Include="Assets\assets\img\team\1.jpg" />
+    <Content Include="Assets\assets\img\team\2.jpg" />
+    <Content Include="Assets\assets\img\team\3.jpg" />
+    <Content Include="Assets\assets\mail\contact_me.js" />
+    <Content Include="Assets\assets\mail\contact_me.php" />
+    <Content Include="Assets\assets\mail\jqBootstrapValidation.js" />
+    <Content Include="Assets\css\styles.css" />
+    <Content Include="Assets\js\scripts.js" />
     <Content Include="Assets\Logo.png" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
@@ -236,6 +269,7 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Shared\Main.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
