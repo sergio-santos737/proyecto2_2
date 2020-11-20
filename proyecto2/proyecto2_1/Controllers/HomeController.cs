@@ -6,7 +6,7 @@ using System.Web.Mvc;
 
 namespace proyecto2_1.Controllers
 {
-    [Authorize]
+    [Authorize(Roles = "Administrador, Estudiante")]
     public class HomeController : Controller
     {
         [AllowAnonymous]
@@ -22,6 +22,7 @@ namespace proyecto2_1.Controllers
             return View();
         }
 
+        [Authorize(Roles = "Administrador")]
         public ActionResult Contact()
         {
             ViewBag.Message = "Your contact page.";
