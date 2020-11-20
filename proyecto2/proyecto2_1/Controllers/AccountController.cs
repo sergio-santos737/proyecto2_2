@@ -157,9 +157,16 @@ namespace proyecto2_1.Controllers
                 if (result.Succeeded)
                 {
                     var RoleManager = new RoleManager<IdentityRole>(new RoleStore<IdentityRole>(new ApplicationDbContext()));
-                    var RoleName = "Admin";
-                    if (RoleManager.RoleExists(RoleName)) {
+                    var RoleName = "Administrador";
+                    if (RoleManager.RoleExists(RoleName)) 
+                    {
                         RoleManager.Create(new IdentityRole(RoleName));
+                        var userTemp = UserManager.FindByName(model.UserName);
+                        if (!UserManager.IsInRole(userTemp.Id, RoleName)) 
+                        {
+                            UserManager.AddToRole(userTemp.Id, RoleName);
+                        }
+
                     }
 
                     await SignInManager.SignInAsync(user, isPersistent:false, rememberBrowser:false);
