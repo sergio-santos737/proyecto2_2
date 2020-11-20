@@ -181,6 +181,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Assets\assets\captura-de-pantalla-2020-09-28-a-las-11.02.48-min-655x368.png" />
+    <Content Include="Assets\assets\GGM.jpg" />
     <Content Include="Assets\assets\img\about\1.jpg" />
     <Content Include="Assets\assets\img\about\2.jpg" />
     <Content Include="Assets\assets\img\about\3.jpg" />
@@ -209,10 +210,15 @@
     <Content Include="Assets\assets\img\team\1.jpg" />
     <Content Include="Assets\assets\img\team\2.jpg" />
     <Content Include="Assets\assets\img\team\3.jpg" />
+    <Content Include="Assets\assets\MAG.jpg" />
     <Content Include="Assets\assets\mail\contact_me.js" />
     <Content Include="Assets\assets\mail\contact_me.php" />
     <Content Include="Assets\assets\mail\jqBootstrapValidation.js" />
     <Content Include="Assets\assets\mail\Letras.png" />
+    <Content Include="Assets\assets\PH.jpg" />
+    <Content Include="Assets\assets\Sintítulo-11.jpg" />
+    <Content Include="Assets\assets\Sintítulo-12.jpg" />
+    <Content Include="Assets\assets\Sintítulo-1copia.jpg" />
     <Content Include="Assets\css\styles.css" />
     <Content Include="Assets\js\scripts.js" />
     <Content Include="Assets\Logo.png" />
