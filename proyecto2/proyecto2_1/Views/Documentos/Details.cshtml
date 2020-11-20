@@ -1,0 +1,83 @@
+﻿@model proyecto2_1.Models.Documento
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div class="jumbotron">
+    <h4>Documento</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Titulo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Titulo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Fecha_de_Lanzamiento)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Fecha_de_Lanzamiento)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.No_Paginas)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.No_Paginas)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Descripcion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Descripcion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Disponibilidad)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Disponibilidad)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Autores.Autor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Autores.Autor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Categoria.Categoría)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Categoria.Categoría)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Idioma1.Idioma1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Idioma1.Idioma1)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.Id_Documento }) |
+    @Html.ActionLink("Regresar", "Index")
+</p>

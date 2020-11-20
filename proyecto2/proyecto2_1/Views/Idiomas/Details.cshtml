@@ -1,0 +1,27 @@
+﻿@model proyecto2_1.Models.Idioma
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Detalles</h2>
+
+<div class="jumbotron">
+    <h4>Idioma</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Idioma1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Idioma1)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.Id_Idioma }) |
+    @Html.ActionLink("Regresar", "Index")
+</p>

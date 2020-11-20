@@ -247,7 +247,6 @@ C:\Users\jhess\OneDrive\Documentos\Proyectos\Biblioteca\proyecto2\proyecto2_1\bi
 C:\Users\jhess\OneDrive\Documentos\Proyectos\Biblioteca\proyecto2\proyecto2_1\bin\es\Microsoft.Owin.Security.Google.resources.dll
 C:\Users\jhess\OneDrive\Documentos\Proyectos\Biblioteca\proyecto2\proyecto2_1\bin\es\Microsoft.Owin.Security.Twitter.resources.dll
 C:\Users\jhess\OneDrive\Documentos\Proyectos\Biblioteca\proyecto2\proyecto2_1\bin\es\Microsoft.Owin.Security.MicrosoftAccount.resources.dll
-C:\Users\jhess\OneDrive\Documentos\Proyectos\Biblioteca\proyecto2\proyecto2_1\obj\Debug\proyecto2_1.csprojAssemblyReference.cache
 C:\Users\jhess\OneDrive\Documentos\Proyectos\Biblioteca\proyecto2\proyecto2_1\obj\Debug\proyecto2_1.csproj.CoreCompileInputs.cache
 C:\Users\jhess\OneDrive\Documentos\Proyectos\Biblioteca\proyecto2\proyecto2_1\obj\Debug\proyecto2_1.csproj.CopyComplete
 C:\Users\jhess\OneDrive\Documentos\Proyectos\Biblioteca\proyecto2\proyecto2_1\obj\Debug\proyecto2_1.dll
@@ -506,3 +505,4 @@ C:\Users\chejo\OneDrive\Documentos\GitHub\proyecto2_2\proyecto2\proyecto2_1\obj\
 C:\Users\chejo\OneDrive\Documentos\GitHub\proyecto2_2\proyecto2\proyecto2_1\obj\Debug\proyecto2_1.csproj.CopyComplete
 C:\Users\chejo\OneDrive\Documentos\GitHub\proyecto2_2\proyecto2\proyecto2_1\obj\Debug\proyecto2_1.dll
 C:\Users\chejo\OneDrive\Documentos\GitHub\proyecto2_2\proyecto2\proyecto2_1\obj\Debug\proyecto2_1.pdb
+C:\Users\jhess\OneDrive\Documentos\Proyectos\Biblioteca\proyecto2\proyecto2_1\obj\Debug\proyecto2_1.csprojAssemblyReference.cache

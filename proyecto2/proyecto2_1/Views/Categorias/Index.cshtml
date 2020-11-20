@@ -1,0 +1,36 @@
+﻿@model IEnumerable<proyecto2_1.Models.Categoria>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Categorías</h2>
+
+<p>
+    @Html.ActionLink("Agregar Categoría", "Create")
+</p>
+<div class="jumbotron">
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Categoría)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Categoría)
+        </td>
+        <td>
+            @Html.ActionLink("Editar", "Edit", new { id=item.Id_Categoria }) |
+            @Html.ActionLink("Mostrar", "Details", new { id=item.Id_Categoria }) |
+            @Html.ActionLink("Borrar", "Delete", new { id=item.Id_Categoria })
+        </td>
+    </tr>
+}
+
+</table>
+</div>

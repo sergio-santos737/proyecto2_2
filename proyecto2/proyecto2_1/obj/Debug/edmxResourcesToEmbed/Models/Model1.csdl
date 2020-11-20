@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DB_BibliotecaModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Autores">
+    <Key>
+      <PropertyRef Name="Id_Autor" />
+    </Key>
+    <Property Name="Id_Autor" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Autor" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Apellido" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Documento" Relationship="Self.FK_Documento_Autores" FromRole="Autores" ToRole="Documento" />
+  </EntityType>
+  <EntityType Name="Categoria">
+    <Key>
+      <PropertyRef Name="Id_Categoria" />
+    </Key>
+    <Property Name="Id_Categoria" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Categoría" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Documento" Relationship="Self.FK_Documento_Categoria" FromRole="Categoria" ToRole="Documento" />
+  </EntityType>
+  <EntityType Name="Documento">
+    <Key>
+      <PropertyRef Name="Id_Documento" />
+    </Key>
+    <Property Name="Id_Documento" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Titulo" Type="String" MaxLength="75" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="Fecha_de_Lanzamiento" Type="DateTime" Precision="0" />
+    <Property Name="Autor" Type="Int32" Nullable="false" />
+    <Property Name="Categoría" Type="Int32" Nullable="false" />
+    <Property Name="Idioma" Type="Int32" Nullable="false" />
+    <Property Name="No_Paginas" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="Descripcion" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Disponibilidad" Type="Boolean" />
+    <NavigationProperty Name="Autores" Relationship="Self.FK_Documento_Autores" FromRole="Documento" ToRole="Autores" />
+    <NavigationProperty Name="Categoria" Relationship="Self.FK_Documento_Categoria" FromRole="Documento" ToRole="Categoria" />
+    <NavigationProperty Name="Idioma1" Relationship="Self.FK_Documento_Idioma" FromRole="Documento" ToRole="Idioma" />
+  </EntityType>
+  <EntityType Name="Idioma">
+    <Key>
+      <PropertyRef Name="Id_Idioma" />
+    </Key>
+    <Property Name="Id_Idioma" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Idioma1" Type="String" MaxLength="50" FixedLength="true" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Documento" Relationship="Self.FK_Documento_Idioma" FromRole="Idioma" ToRole="Documento" />
+  </EntityType>
+  <Association Name="FK_Documento_Autores">
+    <End Role="Autores" Type="Self.Autores" Multiplicity="1" />
+    <End Role="Documento" Type="Self.Documento" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Autores">
+        <PropertyRef Name="Id_Autor" />
+      </Principal>
+      <Dependent Role="Documento">
+        <PropertyRef Name="Autor" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Documento_Categoria">
+    <End Role="Categoria" Type="Self.Categoria" Multiplicity="1" />
+    <End Role="Documento" Type="Self.Documento" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Categoria">
+        <PropertyRef Name="Id_Categoria" />
+      </Principal>
+      <Dependent Role="Documento">
+        <PropertyRef Name="Categoría" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Documento_Idioma">
+    <End Role="Idioma" Type="Self.Idioma" Multiplicity="1" />
+    <End Role="Documento" Type="Self.Documento" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Idioma">
+        <PropertyRef Name="Id_Idioma" />
+      </Principal>
+      <Dependent Role="Documento">
+        <PropertyRef Name="Idioma" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="DB_BibliotecaEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Autores" EntityType="Self.Autores" />
+    <EntitySet Name="Categoria" EntityType="Self.Categoria" />
+    <EntitySet Name="Documento" EntityType="Self.Documento" />
+    <EntitySet Name="Idioma" EntityType="Self.Idioma" />
+    <AssociationSet Name="FK_Documento_Autores" Association="Self.FK_Documento_Autores">
+      <End Role="Autores" EntitySet="Autores" />
+      <End Role="Documento" EntitySet="Documento" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Documento_Categoria" Association="Self.FK_Documento_Categoria">
+      <End Role="Categoria" EntitySet="Categoria" />
+      <End Role="Documento" EntitySet="Documento" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Documento_Idioma" Association="Self.FK_Documento_Idioma">
+      <End Role="Idioma" EntitySet="Idioma" />
+      <End Role="Documento" EntitySet="Documento" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

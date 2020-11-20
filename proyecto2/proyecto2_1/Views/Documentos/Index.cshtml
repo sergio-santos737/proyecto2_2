@@ -1,0 +1,79 @@
+﻿@model IEnumerable<proyecto2_1.Models.Documento>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Documentos</h2>
+
+<p>
+    @Html.ActionLink("Agregar Documento", "Create")
+</p>
+<div class="jumbotron">
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Titulo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Fecha_de_Lanzamiento)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.No_Paginas)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Descripcion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Disponibilidad)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Autores.Autor)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Categoria.Categoría)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Idioma1.Idioma1)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Titulo)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Fecha_de_Lanzamiento)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.No_Paginas)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Descripcion)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Disponibilidad)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Autores.Autor)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Categoria.Categoría)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Idioma1.Idioma1)
+                </td>
+                <td>
+                    @Html.ActionLink("Editar", "Edit", new { id = item.Id_Documento }) |
+                    @Html.ActionLink("Mostrar", "Details", new { id = item.Id_Documento }) |
+                    @Html.ActionLink("Borrar", "Delete", new { id = item.Id_Documento })
+                </td>
+            </tr>
+        }
+
+    </table>
+</div>
